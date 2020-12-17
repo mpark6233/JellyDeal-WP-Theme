@@ -84,23 +84,14 @@ defined( 'ABSPATH' ) || exit;
 				<div class="col-md-9">
 					<footer id="colophon" class="site-footer" role="contentinfo">
 						<div class="site-info">
-<!--							회사주소<br> All Rights Reserved © --><?php //echo date("Y");?><!-- <span class="enfont">회사명</span>-->
-<!--							<span class="sep"> | </span>-->
-<!--						    -->
-<!--							Developed by <a href="https://www.pentamint.com">Pentamint Co., Ltd.</a>.-->
-                            <p>
-                            (주) 비피비<br/>
-                            대표이사 : 박승재<br/>
-                            사업자번호 : 570-81-00420<br/>
-                            대표번호 : 02-511-5794<br/>
-                            주소 : 서울시 송파구 올림픽로35가길 11, 901호<br/>
-                            </p>
+							All Rights Reserved © <?php echo date("Y");?> <span class="enfont">Spleet Co., Ltd.</span>
+							<span class="sep"> | </span>
+						    Developed by <a href="https://www.pentamint.com">Pentamint Co., Ltd.</a>.
 						</div><!-- .site-info -->
 					</footer><!-- #colophon -->
 				</div><!-- .col-md-9 -->
 				<div class="col-md-3">
 					<!-- Default dropup button -->
-
 					<div class="btn-group dropup">
 						<button type="button" class="btn btn-tertiary btn-colophon-toggle" data-toggle="collapse" data-target="#colophon-brand-nav">
 							Link Sites

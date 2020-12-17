@@ -22,69 +22,117 @@
 
         <!-- Start Custom Form -->
         <?php
+            // define variables and set to empty values
+            $termsErr = $emailErr = $attachmentErr = $websiteErr = $prdNameErr = $prdPriceErr = $optNameErr = $optPriceErr = "";
+            $terms = $email = $website = $prdName = $prdPrice = $optName = $optPrice = "";
 
-        // define variables and set to empty values
-        $nameErr = $emailErr = $websiteErr = $productPErr = "";
-        $name = $email = $website = $productP = "";
+            // input fields validation  
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {  
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // if (empty($_POST["name"])) {
-            //     $nameErr = "이름을 입력하여 주세요!";
-            // } else {
-            //     $name = form_input($_POST["name"]);
-            //     // check if name only contains Korean and English letters
-            //     if (!preg_match("/^[a-zA-Z가-힣 ]*$/",$name)) {
-            //     $nameErr = "영문자와 한글만 가능합니다!";
-            //     }
-            // }
-            
-            if (empty($_POST["email"])) {
-                $emailErr = "이메일을 입력하여 주세요!";
-            } else {
-                $emailErr = "";
-                $email = form_input($_POST["email"]);
-                // check if e-mail address is well-formed
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $emailErr = "이메일을 정확히 입력해 주세요!";
+                // terms
+                if (empty($_POST["terms"])) {
+                    $termsErr = "이용약관에 동의해 주세요.";
+                } else {
+                    $terms = form_input($_POST["terms"]);
                 }
-            }
-                
-            if (empty($_POST["website"])) {
-                $websiteErr = "URL 주소를 입력해 주세요!";
-            } else {
-                $website = form_input($_POST["website"]);
-                // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-                if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-                $websiteErr = "잘못된 URL 형식입니다!";
+
+                // attachment
+                $allowed = array('gif', 'png', 'jpg');
+                $filename = $_FILES["attachment"]["name"];
+                $ext = pathinfo($filename, PATHINFO_EXTENSION);
+                if (empty($_FILES["attachment"])) {
+                    $attachmentErr = "학생증 파일을 업로드 해주세요.";
+                } else {
+                    if (!in_array($ext, $allowed)) {
+                    $attachmentErr = "파일은 GIF, PNG, JPG 이미지만 업로드 가능합니다.";
+                    }
                 }
+
+                // school email
+                if (empty($_POST["email"])) {
+                    $emailErr = "재학중인 대학교 이메일 주소를 입력해 주세요.";
+                } else {
+                    $email = form_input($_POST["email"]);
+                    // check if e-mail address is well-formed
+                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $emailErr = "올바르지 않은 이메일 형식입니다. 다시 입력해 주세요.";
+                    }
+                }
+
+                // product url
+                if (empty($_POST["website"])) {
+                    $websiteErr = "구매 상품의 URL 주소를 입력해 주세요.";
+                } else {
+                    $website = form_input($_POST["website"]);
+                    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+                    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+                    $websiteErr = "올바르지 않은 URL 형식입니다. 다시 입력해 주세요.";
+                    }
+                }
+
+                // product name
+                if (empty($_POST["prdName"])) {
+                    $prdNameErr = "제품이름을 입력해 주세요.";
+                } else {
+                    $prdName = form_input($_POST["prdName"]);
+                }
+
+                // product price
+                if (empty($_POST["prdPrice"])) {
+                    $prdPriceErr = "제품가격을 입력해 주세요.";
+                } else {
+                    $prdPrice = form_input($_POST["prdPrice"]);
+                }
+
+                // model name (sanitize only)
+                if ($_POST["modelName"]) {
+                    $modelName = form_input($_POST["modelName"]);
+                }
+
+                // option name
+                if (empty($_POST["optName[]"])) {
+                    $optNameErr = "옵션이름을 입력해 주세요.";
+                } else {
+                    $optName = form_input($_POST["optName"]);
+                }
+
+                // option price
+                if (empty($_POST["optPrice[]"])) {
+                    $optPriceErr = "옵션가격을 입력해 주세요.";
+                } else {
+                    $optPrice = form_input($_POST["optPrice"]);
+                }
+
+                // delivery type
+
+
+                // delivery cost
+
+
+                // delivery address
+
+
             }
 
-            if (empty($_POST["productP"])) {
-                $productPErr = "제품가격을 입력해 주세요!";
-              } else {
-                $productP = form_input($_POST["productP"]);
-              }
-
-        }
-
-        // sanitize input data
-        function form_input($data) {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-        }
-
+            // sanitize input data
+            function form_input($data) {
+                $data = trim($data);
+                $data = stripslashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
+            }
         ?>
+
         <div class="container">
             <!-- <h2 class="apply-title">서비스 신청하기</h2> -->
             <div class="form-wrapper">
-                <p><span class="form-error">* 필수입력란 입니다.</span></p>
-                <form id="apply-form" action="" method="post">
+                <span class="form-error">* 필수입력란 입니다.</span>
+                <form action="" method="post" id="apply-form">
                     <!-- Start 이용약관 동의 -->
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="termsAgree" required>
+                        <input type="checkbox" name="terms" class="form-check-input" id="termsAgree">
                         <label class="form-check-label" for="termsAgree">이용약관 동의</label>
+                        <span class="form-error"><?php echo $termsErr;?></span>
                     </div>
                     <div class="popup-termsAgree" style="display:none;">
 
@@ -95,13 +143,16 @@
                     <!-- End 휴대폰 본인인증 -->
                     <div class="form-group">
                         <label for="email">이메일</label>
-                        <input type="text" name="email" value="<?php echo $email;?>" id="email" required>
+                        <input type="text" name="email" value="<?php echo $email;?>" id="email">
                         <span class="form-error"><?php echo $emailErr;?></span>
                     </div>
+                    <!-- Start 다음주소 입력 -->
+
+                    <!-- End 다음주소 입력 -->
                     <div class="form-group">
                         <label for="file-studentid">학생증 업로드</label>
-                        <input type="file" class="form-control-file" id="file-studentid" required>
-                        <span class="form-error"><?php echo $fileErr;?></span>
+                        <input type="file" name="attachment" class="form-control-file" id="file-studentid">
+                        <span class="form-error"><?php echo $attachmentErr;?></span>
                     </div>
                     <div class="form-group">
                         <label for="url-website">상품링크</label>
@@ -109,19 +160,40 @@
                             placeholder="예) www.jellydeal.io" id="url-website">
                         <span class="form-error"><?php echo $websiteErr;?></span>
                     </div>
-
                     <div class="form-group">
-                        <label for="price-product">제품가격</label>
-                        <input type="text" name="productP" value="<?php echo $productP;?>" id="price-product" numberOnly
-                            required>
+                        <label for="product-name">제품이름</label>
+                        <input type="text" name="prdName" value="<?php echo $prdName;?>" id="product-name"
+                            numberOnly>
+                        <span class="form-error"><?php echo $prdNameErr;?></span>
                     </div>
-
-                    <button type="submit" name="submit" class="btn btn-primary">신청하기</button>
+                    <div class="form-group">
+                        <label for="product-price">제품가격</label>
+                        <input type="text" name="prdPrice" value="<?php echo $prdPrice;?>" id="product-price"
+                            numberOnly>
+                        <span class="form-error"><?php echo $prdPriceErr;?></span>
+                    </div>
+                    <div class="form-group">
+                        <div class="option-group">
+                            <label for="option-name">옵션이름</label>
+                            <input type="text" name="optName[]" value="<?php echo $optName;?>" id="option-name"
+                                numberOnly>
+                            <span class="form-error"><?php echo $optNameErr;?></span>
+                        </div>
+                        <div class="option-group">
+                            <label for="product-price">옵션가격</label>
+                            <input type="text" name="prdPrice[]" value="<?php echo $prdPrice;?>" id="product-price"
+                                numberOnly>
+                            <span class="form-error"><?php echo $prdPriceErr;?></span>
+                        </div>
+                        <input type="button" onclick="addInput()" name="add" value="옵션 추가하기" />
+                    </div>
+                    <input type='submit' name='submit' value='신청하기'>
+                    <!-- <button type="submit" name="submit" class="btn btn-primary">신청하기</button> -->
                 </form><!-- #apply-form -->
             </div><!-- .form-wrapper -->
 
-            <!-- number only script with commas -->
             <script type="text/javascript">
+                // number only script with commas
                 (function ($) {
                     // add commas every 3 digits
                     function addCommas(x) {
@@ -150,6 +222,12 @@
                         $(this).val($(this).val().replace(/[^0-9]/g, ""));
                     });
                 })(jQuery);
+
+                // add more options function
+                function addInput() {
+                    document.getElementById('option-wrapper').innerHTML +=
+                        "Field: <input name='optName[]' type='text' value='' /><br />";
+                }
             </script>
 
             <style>
@@ -158,7 +236,6 @@
                 }
             </style>
         </div><!-- .container -->
-
         <!-- End Custom Form -->
 
     </main><!-- .site-main -->
