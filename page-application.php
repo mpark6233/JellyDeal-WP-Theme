@@ -93,14 +93,16 @@
                 if (empty($_POST["optName[]"])) {
                     $optNameErr = "옵션이름을 입력해 주세요.";
                 } else {
-                    $optName = form_input($_POST["optName"]);
+                    foreach($_POST["optName"] as $optName) {
+                        $optName = form_input($optName);
+                    }
                 }
 
                 // option price
                 if (empty($_POST["optPrice[]"])) {
                     $optPriceErr = "옵션가격을 입력해 주세요.";
                 } else {
-                    $optPrice = form_input($_POST["optPrice"]);
+                    $optPrice = form_input($_POST["optPrice[]"]);
                 }
 
                 // delivery type
@@ -110,8 +112,27 @@
 
 
                 // delivery address
-
-
+                ?>
+                <div class="container">
+                    <?php
+                    echo "<h2>Input Test:</h2>";
+                    echo "<span>Terms: </span>" . $terms;
+                    echo "<br>";
+                    echo "<span>Email: </span>" . $email;
+                    echo "<br>";
+                    echo "<span>Website: </span>" . $website;
+                    echo "<br>";
+                    echo "<span>Product Name: </span>" . $prdName;
+                    echo "<br>";
+                    echo "<span>Product Price: </span>" . $prdPrice;
+                    echo "<br>";
+                    echo "<span>Option Name: </span>" . $optName;
+                    echo "<br>";
+                    echo "<span>Option Price: </span>" . $optPrice;
+                    echo "<br>";
+                    ?>
+                </div>
+                <?php
             }
 
             // sanitize input data
@@ -162,32 +183,30 @@
                     </div>
                     <div class="form-group">
                         <label for="product-name">제품이름</label>
-                        <input type="text" name="prdName" value="<?php echo $prdName;?>" id="product-name"
-                            numberOnly>
+                        <input type="text" name="prdName" value="<?php echo $prdName;?>" id="product-name">
                         <span class="form-error"><?php echo $prdNameErr;?></span>
                     </div>
                     <div class="form-group">
                         <label for="product-price">제품가격</label>
-                        <input type="text" name="prdPrice" value="<?php echo $prdPrice;?>" id="product-price"
-                            numberOnly>
+                        <input type="text" name="prdPrice" value="<?php echo $prdPrice;?>" id="product-price" numberOnly>
                         <span class="form-error"><?php echo $prdPriceErr;?></span>
                     </div>
                     <div class="form-group">
-                        <div class="option-group">
-                            <label for="option-name">옵션이름</label>
-                            <input type="text" name="optName[]" value="<?php echo $optName;?>" id="option-name"
-                                numberOnly>
-                            <span class="form-error"><?php echo $optNameErr;?></span>
+                        <div class="option-wrapper">
+                            <div class="option-group">
+                                <label for="option-name">옵션이름</label>
+                                <input type="text" name="optName[]" value="<?php echo $optName;?>" id="option-name">
+                                <span class="form-error"><?php echo $optNameErr;?></span>
+                            </div>
+                            <div class="option-group">
+                                <label for="option-price">옵션가격</label>
+                                <input type="text" name="optPrice[]" value="<?php echo $optPrice;?>" id="option-price" numberOnly>
+                                <span class="form-error"><?php echo $optPriceErr;?></span>
+                            </div>
                         </div>
-                        <div class="option-group">
-                            <label for="product-price">옵션가격</label>
-                            <input type="text" name="prdPrice[]" value="<?php echo $prdPrice;?>" id="product-price"
-                                numberOnly>
-                            <span class="form-error"><?php echo $prdPriceErr;?></span>
-                        </div>
-                        <input type="button" onclick="addInput()" name="add" value="옵션 추가하기" />
+                        <input type="button" onclick="addInput()" name="add" value="옵션 추가하기" id="optBtn" />
                     </div>
-                    <input type='submit' name='submit' value='신청하기'>
+                    <input type='submit' name='submit' value='신청하기' class='btn btn-primary'>
                     <!-- <button type="submit" name="submit" class="btn btn-primary">신청하기</button> -->
                 </form><!-- #apply-form -->
             </div><!-- .form-wrapper -->
@@ -225,8 +244,10 @@
 
                 // add more options function
                 function addInput() {
-                    document.getElementById('option-wrapper').innerHTML +=
-                        "Field: <input name='optName[]' type='text' value='' /><br />";
+                    var opt = document.getElementById("optBtn");
+                    opt.insertAdjacentHTML('beforebegin',
+                        '<br /><div class="option-wrapper"><div class="option-group"><label for="option-name">옵션이름</label><input type="text" name="optName[]" value="<?php echo $optName;?>" id="option-name" numberOnly><span class="form-error"><?php echo $optNameErr;?></span></div><div class="option-group"><label for="product-price">옵션가격</label><input type="text" name="prdPrice[]" value="<?php echo $prdPrice;?>" id="product-price" numberOnly><span class="form-error"><?php echo $prdPriceErr;?></span></div></div>'
+                        );
                 }
             </script>
 
