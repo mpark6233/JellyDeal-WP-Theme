@@ -34,42 +34,42 @@
     }
   });
 
-  // --- Fixed Header --- //
-	$(document).ready(function() {
-    // When the user scrolls the page, execute addFixedHeader
-    window.onscroll = function() { addFixedHeader() };
-    // Get the header
-    var masthead = document.getElementById("masthead");
-    // If top header exist, get the main header
-    var mainheader = document.getElementById("main-header");
+  // // --- Fixed Header --- //
+	// $(document).ready(function() {
+  //   // When the user scrolls the page, execute addFixedHeader
+  //   window.onscroll = function() { addFixedHeader() };
+  //   // Get the header
+  //   var masthead = document.getElementById("masthead");
+  //   // If top header exist, get the main header
+  //   var mainheader = document.getElementById("main-header");
   
-    // If top header exist, get the offset position of the main header
-    var disttotop = mainheader.offsetTop;
+  //   // If top header exist, get the offset position of the main header
+  //   var disttotop = mainheader.offsetTop;
 
-    // Get the Wordpress admin bar height
-    var wpadminbarheight = $('#wpadminbar').height();
-    // Get the header height
-    var mastheadheight = $('#masthead').height();
+  //   // Get the Wordpress admin bar height
+  //   var wpadminbarheight = $('#wpadminbar').height();
+  //   // Get the header height
+  //   var mastheadheight = $('#masthead').height();
     
-    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function addFixedHeader() {
-      // For width <= 600px, add sticky class after scroll y pos is >= 46px
-      if (window.innerWidth <= 600 && window.pageYOffset > wpadminbarheight || (window.innerWidth > 600 && window.pageYOffset > disttotop)) {
-        // Add sticky class on scroll
-        masthead.classList.add("sticky");
-        // Add fixed position on scroll
-        $('#masthead').css('position', 'fixed');
-        // Add page content top spacing on scroll
-        $('.site-content').css('margin-top', mastheadheight);
-      } else {
-        masthead.classList.remove("sticky");
-        // Add relative position on top pos
-        $('#masthead').css('position', 'relative');
-        // Reset page content top spacing
-        $('.site-content').css('margin-top', 0);
-      }
-    };
-  });
+  //   // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  //   function addFixedHeader() {
+  //     // For width <= 600px, add sticky class after scroll y pos is >= 46px
+  //     if (window.innerWidth <= 600 && window.pageYOffset > wpadminbarheight || (window.innerWidth > 600 && window.pageYOffset > disttotop)) {
+  //       // Add sticky class on scroll
+  //       masthead.classList.add("sticky");
+  //       // Add fixed position on scroll
+  //       $('#masthead').css('position', 'fixed');
+  //       // Add page content top spacing on scroll
+  //       $('.site-content').css('margin-top', mastheadheight);
+  //     } else {
+  //       masthead.classList.remove("sticky");
+  //       // Add relative position on top pos
+  //       $('#masthead').css('position', 'relative');
+  //       // Reset page content top spacing
+  //       $('.site-content').css('margin-top', 0);
+  //     }
+  //   };
+  // });
 
   // ----- Bootstrap Support ----- //
 

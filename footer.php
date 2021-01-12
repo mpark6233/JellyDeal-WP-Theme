@@ -46,59 +46,59 @@ defined( 'ABSPATH' ) || exit;
 	<div id="main-footer" class="footer-wrapper">
 		<div class="container">
 			<footer id="footer-sidebar" class="row widget-area">
-				<div id="footer-sidebar1" class="col-md-3">
-					<?php
-						if(is_active_sidebar('footer-sidebar-1')){
-							dynamic_sidebar('footer-sidebar-1');
-						}
-					?>
-				</div>
-				<div id="footer-sidebar2" class="col-md-6">
-					<?php
-						if(is_active_sidebar('footer-sidebar-2')){
-							dynamic_sidebar('footer-sidebar-2');
-						}
-					?>
-				</div>
-				<div id="footer-sidebar3" class="col-md-3">
-					<?php
-						if(is_active_sidebar('footer-sidebar-3')){
-							dynamic_sidebar('footer-sidebar-3');
-						}
-					?>
-				</div>
-				<div id="footer-sidebar4">
+				<div id="footer-sidebar4" class="col-md-12">
 					<?php
 						if(is_active_sidebar('footer-sidebar-4')){
 							dynamic_sidebar('footer-sidebar-4');
 						}
 					?>
 				</div>
+				<div id="footer-sidebar1" class="col-md-12">
+					<?php
+						if(is_active_sidebar('footer-sidebar-1')){
+							dynamic_sidebar('footer-sidebar-1');
+						}
+					?>
+				</div>				
+				<!--div id="footer-sidebar3" class="col-md-3">
+					<!?php
+						if(is_active_sidebar('footer-sidebar-3')){
+							dynamic_sidebar('footer-sidebar-3');
+						}
+					?>
+				</div>
+				<!--div id="footer-sidebar2">
+					<!?php
+						if(is_active_sidebar('footer-sidebar-2')){
+							dynamic_sidebar('footer-sidebar-2');
+						}
+					?>
+				</div-->
 			</footer>
 		</div><!-- .container -->
 	</div><!-- .footer-wrapper -->
 
-	<div id="bottom-footer" class="footer-wrapper">
+	<!--div id="bottom-footer" class="footer-wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9">
 					<footer id="colophon" class="site-footer" role="contentinfo">
 						<div class="site-info">
-							All Rights Reserved © <?php echo date("Y");?> <span class="enfont">Spleet Co., Ltd.</span>
+							All Rights Reserved © <!?php echo date("Y");?> <span class="enfont">Spleet Co., Ltd.</span>
 							<span class="sep"> | </span>
 						    Developed by <a href="https://www.pentamint.com">Pentamint Co., Ltd.</a>.
 						</div><!-- .site-info -->
-					</footer><!-- #colophon -->
-				</div><!-- .col-md-9 -->
-				<div class="col-md-3">
+					<!--/footer><!-- #colophon -->
+				<!--/div><!-- .col-md-9 -->
+				<!--div class="col-md-3">
 					<!-- Default dropup button -->
-					<div class="btn-group dropup">
+					<!--div class="btn-group dropup">
 						<button type="button" class="btn btn-tertiary btn-colophon-toggle" data-toggle="collapse" data-target="#colophon-brand-nav">
 							Link Sites
 						</button>
 						<div class="collapse dropdown-menu" id="colophon-brand-nav">
 							<!-- Dropdown menu links -->
-							<?php
+							<!--?php
 								wp_nav_menu( array(
 									'theme_location'    => 'colophon',
 									'container_class'   => 'collapse navbar-collapse',
@@ -111,11 +111,11 @@ defined( 'ABSPATH' ) || exit;
 								);
 							?>
 						</div><!-- .dropdown-menu -->
-					</div><!-- .btn-group -->
-				</div><!-- .col-md-3 -->
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</div><!-- .colophon-wrapper -->
+					<!--/div><!-- .btn-group -->
+				<!--/div><!-- .col-md-3 -->
+			<!--/div><!-- .row -->
+		<!--/div><!-- .container -->
+	<!--/div--><!-- .colophon-wrapper -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
