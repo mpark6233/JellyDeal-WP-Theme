@@ -1,0 +1,598 @@
+/*!
+ * 개발업체 CSS 코드
+ * 
+ * 하단 펜타민트 보정 CSS 코드 추가
+ */
+
+/* 20201222 젤리딜수정 */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+label {
+    /*display: inline-block;
+    margin-bottom: 0.5rem; }*/
+    display: inline-block;
+    margin-bottom: 0rem; 
+}
+.justify-content-md-center {
+    justify-content: center !important; 
+	max-width: 600px;
+    margin: 0 auto;
+	font-family: 'Spoqa Han Sans Neo'; 
+	font-weight: 400;
+}
+.site-header {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#main-footer {
+    background-color: #000000;
+}
+.site-header #main-header .container nav .nav-wrapper .navbar-collapse.show {
+    background-color: rgba(0, 0, 0, 0.8);;
+    border-left-color: #444;
+}
+.btn.btn-primary {
+    background-color: #333333;
+    border-color: #333333;
+}
+.btn.btn-primary100 {
+    background-color: #333333;
+    border-color: #333333;
+    width: 100%;
+}
+.btn.btn-primary100:hover {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+}
+.btn.btn-primary:hover {
+	color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 0px solid;
+  border-radius: 0px;
+  border-color: #ccc #ccc #bbb;
+  background: #000;
+  color: #fff;
+  font-size: .9rem;
+  line-height: 1rem;
+  padding: .8rem .5rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 0px;
+  padding: 3px;
+  margin: 3px 0;
+}
+select {
+    border: 3px solid #000;
+    padding: .5rem 0;
+    background: #000;
+    color: #fff;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: #fff;
+}
+#kboard-default-list .kboard-pagination .kboard-pagination-pages li:hover a, #kboard-default-list .kboard-pagination .kboard-pagination-pages li.active a {
+    color: #fff !important;
+    background-color: #000 !important; 
+}
+#kboard-default-list a.kboard-default-button-small, #kboard-default-list input.kboard-default-button-small, #kboard-default-list button.kboard-default-button-small, #kboard-default-document a.kboard-default-button-small, #kboard-default-document input.kboard-default-button-small, #kboard-default-document button.kboard-default-button-small {
+    color: #fff !important;
+    background: #000 !important;
+}
+
+@media (min-width: 992px){
+
+    /*What’s Jelly Deal?*/
+    #what{position:static; padding:7rem 0 7rem 0;  height:25rem; margin: 0 auto; border-top: 1px solid #d2d2d2; }
+    #what .box{ width: 60rem; margin: 0 auto; }
+    #what .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #what .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    
+    /*Why Jelly Deal?*/
+    #why{position:static; padding:7rem 0 7rem 0;  height:40rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #why .box  { width: 60rem; margin: 0 auto; }
+    #why .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #why .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 400; vertical-align:middle; text-align:center; line-height:0rem;}
+    #why img {width:50%; height:auto;}
+    #why .title01 { height:1rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; line-height:2rem; text-align:center; }
+    #why .text01 { font-size: 1.1rem; line-height: 1.5rem; color: #000; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; text-align:center; vertical-align:middle; text-transform:uppercase; letter-spacing:-1px;}
+    #why .red {color:#ff003a; font-weight: 600;}
+        
+    /*shop with jelly deal*/
+    #shop{position:static; padding:7rem 0 7rem 0; height:35rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #shop .box  { width: 60rem; margin: 0 auto; }
+    #shop .title {float:left; width:100%; height:7rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #shop .subtitle {float:left; position: relative; top: 0rem; right:-12.3rem; width:100%; height:2rem; color: #000000; font-size:1.5rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; text-align:center; line-height:0rem;}
+    #shop img {width:100%; height:auto;}
+    #shop .title01 { height:1rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; line-height:1rem; text-align:center; text-transform:uppercase; }
+    #shop .text01 { height:1rem; font-size: 1.1rem; line-height: 1rem; color: #000; font-family: 'Spoqa Han Sans Neo'; font-weight: 400; text-align:center; vertical-align:middle; letter-spacing:-1px;}
+    
+    #shop .prev01 {position: relative; bottom: -4.5rem; left: -2rem; width:100%; height:2rem; font-size: 1rem; line-height: 1rem; vertical-align:middle;}
+    #shop .next01 {position: relative; bottom: 11rem; right: -2rem; width:100%; height:2rem; font-size: 1rem; line-height: 1rem; text-align:right; vertical-align:middle;}	
+    
+    /*If you jelly Deal*/
+    #works{position:static; padding:7rem 0 7rem 0;  height:38rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #works .box  { width: 60rem; margin: 0 auto; }
+    #works .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #works .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:.9rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    #works img {width:100%; height:auto;}
+    
+    /*What’s Special?*/
+    #special{position:static; padding:7rem 0 7rem 0;  height:35rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #special .box  { width: 60rem; margin: 0 auto; }
+    #special .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #special .subtitle {float:left; width:100%; height:3rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:left; line-height:3.5rem;}
+    #special .subtitle01 {float:left; width:100%; height:3rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:left; line-height:1.7rem;}
+    #special img {float:left; vertical-align:middle; padding: 0 1rem 1rem 0;}
+    
+        
+    /*How to use*/
+    #use{position:static; padding:7rem 0 7rem 0;  height:40rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #use .box  { width: 60rem; margin: 0 auto; }
+    #use .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #use .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    #use img {width:85%; height:auto;}
+    #use .title01 { height:1rem; color: #000000; font-size:1.3rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; line-height:2rem; text-align:center; }
+    #use .text01 { font-size: 1.1rem; line-height: 1.5rem; color: #000; font-family: 'Spoqa Han Sans Neo'; font-weight: 600; text-align:center; vertical-align:middle; text-transform:uppercase; letter-spacing:-1px;}
+    #use .red {color:#ff003a; font-weight: 600;}
+        
+    /*footer*/
+    #footer .related {float:left; width: 100%; height: 1.5rem; position:relative; display: flex;}
+    #footer .related a{font-family: 'Spoqa Han Sans Neo'; font-weight: 500; font-size:.9rem; color:#ffffff; letter-spacing:0px; word-spacing: 1rem; padding: 0 1rem 0 0;}
+    #footer .related a.red {color:#ff003a; font-weight: 500;}
+    #footer .address {float:left; width: 100%; height: 11rem; font-family: 'Spoqa Han Sans Neo';}
+    #footer .address li.text01{font-weight:200; font-size:1rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem;}
+    #footer .address li.text02{font-weight:200; font-size:.8rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem; padding: 1rem 0;}
+    #footer .address li.text03{font-weight:200; font-size:.8rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem;}
+    #footer .provision {float:right; width: 100%;  font-family: 'Spoqa Han Sans Neo';}
+    #footer .provision img {width:50%; height:auto;}
+}
+    
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+    /*What’s Jelly Deal?*/
+    #what{position:static; padding:7rem 0 7rem 0;  height:25rem; margin: 0 auto; border-top: 1px solid #d2d2d2; }
+    #what .box{ width: 60rem; margin: 0 auto; }
+    #what .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #what .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    
+    /*Why Jelly Deal?*/
+    #why{position:static; padding:7rem 0 7rem 0;  height:37rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #why .box  { width: 100%; margin: 0 auto; }
+    #why .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #why .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:0rem;}
+    #why img {width:50%; height:auto;}
+    #why .title01 { height:1rem; color: #000000; font-size:0.9rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; line-height:2rem; text-align:center; }
+    #why .text01 { font-size: .9rem; line-height: 1.5rem; color: #000; font-family: 'Spoqa Han Sans Neo'; font-weight: 600; text-align:center; vertical-align:middle; text-transform:uppercase; letter-spacing:-1px;}
+    #why .red {color:#ff003a; font-weight: 600;}
+    #why .wp-block-column:not(:only-child) { flex-basis: calc(35% - 1em)!important; flex-grow: 0;}
+        
+    /*shop with jelly deal*/
+    #shop{position:static; padding:7rem 0 7rem 0; height:35rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #shop .box  { width: 100%; margin: 0 auto; }
+    #shop .title {float:left; width:100%; height:7rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #shop .subtitle {float:left; position: relative; top: 0rem; right:-12.3rem; width:100%; height:2rem; color: #000000; font-size:1.5rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; text-align:center; line-height:0rem;}
+    #shop img {width:100%; height:auto;}
+    #shop .title01 { height:1rem; color: #000000; font-size:1.3rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; line-height:1rem; text-align:center; text-transform:uppercase; }
+    #shop .text01 { height:1rem; font-size: 1.1rem; line-height: 1rem; color: #000; font-family: 'Spoqa Han Sans Neo'; font-weight: 400; text-align:center; vertical-align:middle; letter-spacing:-1px;}
+    #shop .wp-block-column:not(:only-child) { flex-basis: calc(26.7% - 1em)!important; flex-grow: 0;}
+    
+    /*If you jelly Deal*/
+    #works{position:static; padding:5rem 0 5rem 0;  height:32rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #works .box  { width: 100%; margin: 0 auto; }
+    #works .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #works .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:.7rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    #works img {width:100%; height:auto;}
+    #works .wp-block-column:not(:only-child) { flex-basis: calc(21.3% - 1em)!important; flex-grow: 0;}
+        
+    /*What’s Special?*/
+    #special{position:static; padding:7rem 0 7rem 0;  height:35rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #special .box  { width: 100%; margin: 0 auto; }
+    #special .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #special .subtitle {float:left; width:100%; height:3rem; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:left; line-height:3.5rem;}
+    #special .subtitle01 {float:left; width:100%; height:3rem; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:left; line-height:1.7rem;}
+    #special img {float:left; vertical-align:middle; padding: 0 1rem 1rem 0;}
+    
+    /*How to use*/
+    #use{position:static; padding:7rem 0 7rem 0;  height:40rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #use .box  { width: 100%; margin: 0 auto; }
+    #use .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #use .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    #use img {width:85%; height:auto;}
+    #use .wp-block-column:not(:only-child) { flex-basis: calc(26.3% - 1em)!important; flex-grow: 0;}
+        
+    /*footer*/
+    #footer .related {float:left; width: 100%; height: 1.5rem; position:relative; display: flex;}
+    #footer .related a{font-family: 'Spoqa Han Sans Neo'; font-weight: 500; font-size:.9rem; color:#ffffff; letter-spacing:0px; word-spacing: 1rem; padding: 0 1rem 0 0;}
+    #footer .address {float:left; width: 100%; height: 11rem; font-family: 'Spoqa Han Sans Neo';}
+    #footer .address li.text01{font-weight:200; font-size:1rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem;}
+    #footer .address li.text02{font-weight:200; font-size:.8rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem; padding: 1rem 0;}
+    #footer .address li.text03{font-weight:200; font-size:.8rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem;}
+    #footer .provision {float:right; width: 100%; font-family: 'Spoqa Han Sans Neo';}
+    #footer .provision img {width:50%; height:auto;}
+}
+    
+@media only screen and (min-width: 575px) and (max-width: 767px) {
+    /*What’s Jelly Deal?*/
+    #what{position:static; padding:5rem 0 5rem 0;  height:22rem; margin: 0 auto; border-top: 1px solid #d2d2d2; }
+    #what .box{ width: 100%; margin: 0 auto; }
+    #what .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.0rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #what .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    
+    /*Why Jelly Deal?*/
+    #why{position:static; padding:5rem 0 5rem 0;  height:33rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #why .box  { width: 100%; margin: 0 auto; }
+    #why .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.0rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #why .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:0rem;}
+    #why img {width:50%; height:auto;}
+    #why .title01 { height:1rem; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; line-height:2rem; text-align:center; }
+    #why .text01 { font-size: .9rem; line-height: 1.5rem; color: #000; font-family: 'Spoqa Han Sans Neo'; font-weight: 600; text-align:center; vertical-align:middle; text-transform:uppercase; letter-spacing:-1px;}
+    #why .red {color:#ff003a; font-weight: 600;}
+    #why .wp-block-column:not(:only-child) { flex-basis: calc(35% - 1em)!important; flex-grow: 0;}
+    #why .container { max-width: 100%;}
+        
+    /*shop with jelly deal*/
+    #shop{position:static; padding:5rem 0 5rem 0; height:32rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #shop .box  { width: 100%; margin: 0 auto; }
+    #shop .title {float:left; width:100%; height:7rem; color: #000000; font-size:3.0rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #shop .subtitle {float:left; position: relative; top: 0rem; right:-12.3rem; width:100%; height:2rem; color: #000000; font-size:1.5rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; text-align:center; line-height:0rem;}
+    #shop img {width:100%; height:auto;}
+    #shop .title01 { height:1rem; color: #000000; font-size:1.3rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; line-height:1rem; text-align:center; text-transform:uppercase; }
+    #shop .text01 { height:1rem; font-size: 1.1rem; line-height: 1rem; color: #000; font-family: 'Spoqa Han Sans Neo'; font-weight: 400; text-align:center; vertical-align:middle; letter-spacing:-1px;}
+    #shop .wp-block-column:not(:only-child) { flex-basis: calc(26.7% - 1em)!important; flex-grow: 0;}
+    
+    /*If you jelly Deal*/
+    #works{position:static; padding:5rem 0 5rem 0;  height:32rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #works .box  { width: 100%; margin: 0 auto; }
+    #works .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #works .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:.7rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    #works img {width:100%; height:auto;}
+    #works .wp-block-column:not(:only-child) { flex-basis: calc(21.3% - 1em)!important; flex-grow: 0;}
+        
+    /*What’s Special?*/
+    #special{position:static; padding:7rem 0 7rem 0;  height:35rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #special .box  { width: 100%; margin: 0 auto; }
+    #special .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #special .subtitle {float:left; width:100%; height:3rem; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:left; line-height:3.5rem;}
+    #special .subtitle01 {float:left; width:100%; height:3rem; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:left; line-height:1.7rem;}
+    #special img {float:left; vertical-align:middle; padding: 0 1rem 1rem 0;}
+    
+    /*How to use*/
+    #use{position:static; padding:7rem 0 7rem 0;  height:40rem; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #use .box  { width: 100%; margin: 0 auto; }
+    #use .title {float:left; width:100%; height:5rem; color: #000000; font-size:3.5rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #use .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    #use img {width:85%; height:auto;}
+    #use .wp-block-column:not(:only-child) { flex-basis: calc(26.3% - 1em)!important; flex-grow: 0;}
+        
+    /*footer*/
+    #main-footer {padding: 4rem 0 4rem 0;}
+    #main-footer .container { max-width: 100%;}
+    #footer .related {float:left; width: 100%; height: 1.5rem; position:relative; display: flex;}
+    #footer .related a{font-family: 'Spoqa Han Sans Neo'; font-weight: 500; font-size:.9rem; color:#ffffff; letter-spacing:0px; word-spacing: 1rem; padding: 0 1rem 0 0;}
+    #footer .related a.red {color:#ff003a; font-weight: 500;}
+    #footer .address {float:left; width: 100%; height: 11rem; font-family: 'Spoqa Han Sans Neo';}
+    #footer .address li.text01{font-weight:200; font-size:1rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem;}
+    #footer .address li.text02{font-weight:200; font-size:.8rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem; padding: 1rem 0;}
+    #footer .address li.text03{font-weight:200; font-size:.8rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem;}
+    #footer .provision {float:right; width: 100%; font-family: 'Spoqa Han Sans Neo'; }
+    #footer .provision img {width:50%; height:auto;}
+}
+
+@media only screen and (min-width: 376px) and (max-width: 574px) {
+    /*What’s Jelly Deal?*/
+    #what{position:static; padding:5rem 0 5rem 0;  height:22rem; margin: 0 auto; border-top: 1px solid #d2d2d2; }
+    #what .box{ width: 100%; margin: 0 auto; }
+    #what .title {float:left; width:100%; height:4rem; color: #000000; font-size:2.0rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #what .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:.9rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    
+    /*Why Jelly Deal?*/
+    #why{position:static; padding:5rem 0 5rem 0;   margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #why .box  { width: 100%; margin: 0 auto; }
+    #why .title {float:left; width:100%; height:5rem; color: #000000; font-size:2.0rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #why .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:0rem;}
+    #why img {width:50%; height:auto;}
+    #why .title01 { height:1rem; color: #000000; font-size:1.4rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; line-height:2rem; text-align:center; } #why .text01 { font-size: 1.2rem; line-height: 1.5rem; color: #000; font-family: 'Spoqa Han Sans Neo'; font-weight: 400; text-align:center; vertical-align:middle; text-transform:uppercase; letter-spacing:-1px;}
+    #why .red {color:#ff003a; font-weight: 600;}
+    #why .wp-block-column:not(:only-child) { flex-basis: calc(100% - 0em)!important; flex-grow: 0;}
+    #why .container { max-width: 100%;}
+        
+    /*shop with jelly deal*/
+    #shop{position:static; padding:5rem 0 5rem 0; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #shop .box  { width: 100%; margin: 0 auto; }
+    #shop .title {float:left; width:100%; height:7rem; color: #000000; font-size:1.8rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #shop .subtitle {float:left; position: relative; top: 0rem; right:-12.3rem; width:100%; height:2rem; color: #000000; font-size:1.5rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; text-align:center; line-height:0rem;}
+    #shop img {width:70%; height:auto;}
+    #shop .title01 { height:1rem; color: #000000; font-size:1.3rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; line-height:1rem; text-align:center; text-transform:uppercase; }
+    #shop .text01 { height:1rem; font-size: 1.1rem; line-height: 1rem; color: #000; font-family: 'Spoqa Han Sans Neo'; font-weight: 400; text-align:center; vertical-align:middle; letter-spacing:-1px;}
+    #shop .wp-block-column:not(:only-child) { flex-basis: calc(100% - 0em)!important; flex-grow: 0;}
+    
+    /*If you jelly Deal*/
+    #works{position:static; padding:5rem 0 5rem 0; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #works .box  { width: 100%; margin: 0 auto; }
+    #works .title {float:left; width:100%; height:5rem; color: #000000; font-size:2rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #works .subtitle {float:left; width:100%; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    #works img {width:60%; height:auto;}
+    #works .wp-block-column:not(:only-child) { flex-basis: calc(100% - 0em)!important; flex-grow: 0;}
+        
+    /*What’s Special?*/
+    #special{position:static; padding:5rem 0 5rem 0; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #special .box  { width: 100%; margin: 0 auto; }
+    #special .title {float:left; width:100%; height:5rem; color: #000000; font-size:2rem; font-family: 'Lato', sans-serif; font-weight: 700; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #special .subtitle {float:left; width:100%; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:left; }
+    #special .subtitle01 {float:left; width:100%; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:left; }
+    #special img {float:left; vertical-align:middle; padding: 0 1rem 3.5rem 0;}
+    
+    /*How to use*/
+    #use{position:static; padding:5rem 0 5rem 0; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #use .box  { width: 100%; margin: 0 auto; }
+    #use .title {float:left; width:100%; height:5rem; color: #000000; font-size:2rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #use .subtitle {float:left; width:100%; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    #use img {width:60%; height:auto;}
+    #use .wp-block-column:not(:only-child) { flex-basis: calc(100% - 0em)!important; flex-grow: 0;}
+        
+    /*footer*/
+    #main-footer {padding: 4rem 0 8rem 0;}
+    #main-footer .container { max-width: 100%;}
+    #footer .related {float:left; width: 100%; padding: .5rem 0;  }
+    #footer .related a{font-family: 'Spoqa Han Sans Neo'; font-weight: 500; font-size:.9rem; color:#ffffff; letter-spacing:0px; word-spacing: 1rem; padding: 0 1rem 0 0; display: inline-block;}
+    #footer .related a.red {color:#ff003a; font-weight: 500;}
+    #footer .address {float:left; width: 100%; height: 11rem; font-family: 'Spoqa Han Sans Neo';}
+    #footer .address li.text01{font-weight:200; font-size:1rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem;}
+    #footer .address li.text02{font-weight:200; font-size:.8rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem; padding: 1rem 0;}
+    #footer .address li.text03{font-weight:200; font-size:.8rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem;}
+    #footer .provision {float:right; width: 100%; font-family: 'Spoqa Han Sans Neo';}
+    #footer .provision img {width:50%; height:auto;}
+    
+}
+    
+@media only screen and (max-width: 375px) {
+    /*What’s Jelly Deal?*/
+    #what{position:static; padding:5rem 0 5rem 0;  height:22rem; margin: 0 auto; border-top: 1px solid #d2d2d2; }
+    #what .box{ width: 100%; margin: 0 auto; }
+    #what .title {float:left; width:100%; height:4rem; color: #000000; font-size:2.0rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #what .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:.9rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    
+    /*Why Jelly Deal?*/
+    #why{position:static; padding:5rem 0 5rem 0;   margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #why .box  { width: 100%; margin: 0 auto; }
+    #why .title {float:left; width:100%; height:5rem; color: #000000; font-size:2.0rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #why .subtitle {float:left; width:100%; height:1rem; color: #000000; font-size:1.2rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:0rem;}
+    #why img {width:50%; height:auto;}
+    #why .title01 { height:1rem; color: #000000; font-size:1.4rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; line-height:2rem; text-align:center; } #why .text01 { font-size: 1.2rem; line-height: 1.5rem; color: #000; font-family: 'Spoqa Han Sans Neo'; font-weight: 400; text-align:center; vertical-align:middle; text-transform:uppercase; letter-spacing:-1px;}
+    #why .red {color:#ff003a; font-weight: 600;}
+    #why .wp-block-column:not(:only-child) { flex-basis: calc(100% - 0em)!important; flex-grow: 0;}
+    #why .container { max-width: 100%;}
+        
+    /*shop with jelly deal*/
+    #shop{position:static; padding:5rem 0 5rem 0; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #shop .box  { width: 100%; margin: 0 auto; }
+    #shop .title {float:left; width:100%; height:7rem; color: #000000; font-size:1.8rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #shop .subtitle {float:left; position: relative; top: 0rem; right:-12.3rem; width:100%; height:2rem; color: #000000; font-size:1.5rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; text-align:center; line-height:0rem;}
+    #shop img {width:70%; height:auto;}
+    #shop .title01 { height:1rem; color: #000000; font-size:1.3rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 700; vertical-align:middle; line-height:1rem; text-align:center; text-transform:uppercase; }
+    #shop .text01 { height:1rem; font-size: 1.1rem; line-height: 1rem; color: #000; font-family: 'Spoqa Han Sans Neo'; font-weight: 400; text-align:center; vertical-align:middle; letter-spacing:-1px;}
+    #shop .wp-block-column:not(:only-child) { flex-basis: calc(100% - 0em)!important; flex-grow: 0;}
+    
+    /*If you jelly Deal*/
+    #works{position:static; padding:5rem 0 5rem 0; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #works .box  { width: 100%; margin: 0 auto; }
+    #works .title {float:left; width:100%; height:5rem; color: #000000; font-size:2rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #works .subtitle {float:left; width:100%; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    #works img {width:60%; height:auto;}
+    #works .wp-block-column:not(:only-child) { flex-basis: calc(100% - 0em)!important; flex-grow: 0;}
+        
+    /*What’s Special?*/
+    #special{position:static; padding:5rem 0 5rem 0; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #special .box  { width: 100%; margin: 0 auto; }
+    #special .title {float:left; width:100%; height:5rem; color: #000000; font-size:2rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #special .subtitle {float:left; width:100%; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:left; }
+    #special .subtitle01 {float:left; width:100%; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:left; }
+    #special img {float:left; vertical-align:middle; padding: 0 1rem 3.5rem 0;}
+    
+    /*How to use*/
+    #use{position:static; padding:5rem 0 5rem 0; margin: 0 auto; border-top: 1px solid #d2d2d2;}
+    #use .box  { width: 100%; margin: 0 auto; }
+    #use .title {float:left; width:100%; height:5rem; color: #000000; font-size:2rem; font-family: 'Lato', sans-serif; font-weight: 900; vertical-align:middle; text-align:center; line-height:2rem; text-transform:uppercase;}
+    #use .subtitle {float:left; width:100%; color: #000000; font-size:1.0rem; font-family: 'Spoqa Han Sans Neo'; font-weight: 500; vertical-align:middle; text-align:center; line-height:2rem;}
+    #use img {width:60%; height:auto;}
+    #use .wp-block-column:not(:only-child) { flex-basis: calc(100% - 0em)!important; flex-grow: 0;}
+        
+    /*footer*/
+    #main-footer {padding: 4rem 0 8rem 0;}
+    #main-footer .container { max-width: 100%;}
+    #footer .related {float:left; width: 100%; padding: .5rem 0; }
+    #footer .related a{font-family: 'Spoqa Han Sans Neo'; font-weight: 500; font-size:.9rem; color:#ffffff; letter-spacing:0px; word-spacing: 1rem; padding: 0 1rem 0 0; display: inline-block;}
+    #footer .related a.red {color:#ff003a; font-weight: 500;}
+    #footer .address {float:left; width: 100%; height: 11rem; font-family: 'Spoqa Han Sans Neo';}
+    #footer .address li.text01{font-weight:200; font-size:1rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem;}
+    #footer .address li.text02{font-weight:200; font-size:.8rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem; padding: 1rem 0;}
+    #footer .address li.text03{font-weight:200; font-size:.8rem; color:#ffffff; display:block; letter-spacing:0px; line-height:1.5rem;}
+    #footer .provision {float:right; width: 100%; font-family: 'Spoqa Han Sans Neo';}
+    #footer .provision img {width:50%; height:auto;}
+    
+}
+        
+    /*개인정보취급방침*/
+    .from-t1 {font-size:2rem; font-family: 'Spoqa Han Sans Neo';}
+    .from-t2 {font-size:1.5rem; font-family: 'Spoqa Han Sans Neo';}
+    .from-t3 {font-size:1rem; font-family: 'Spoqa Han Sans Neo';}
+    .from-t4 {font-size:.9rem; font-family: 'Spoqa Han Sans Neo';}
+    .from-t5 {font-size:.7rem; font-family: 'Spoqa Han Sans Neo';}
+    .from-p1 {padding: 1rem 0;}
+    .from-p2 {padding: 2rem 0;}
+    .from-p3 {padding: 3rem 0;}
+    .from-p4 {padding: 4rem 0;}
+    .from-p5 {padding: 5rem 0;}
+    .from-f1 {font-weight: 400;}
+    .from-f2 {font-weight: 500;}
+    .from-f3 {font-weight: 600;}
+    .from-f4 {font-weight: 700;}
+    .from-f5 {font-weight: 800;}
+    .from-line1 {border-top: 1px solid #000000;}
+    .from-line2 {border-top: 2px solid #000000;}
+    .from-line3 {border-top: 3px solid #000000;}
+    .from-line4 {border-top: 4px solid #000000;}
+    .from-line5 {border-top: 5px solid #000000;}
+    
+    /*20201222 젤리딜수정*/
+
+/*!
+ * Extra CSS Code from Pentamint
+ *
+ * Loaded last by Wordpress Enqueue function
+ */
+
+/* Default */
+body {font-family: 'NotoSans Light','Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','돋움',dotum, sans-serif;}
+
+h1.entry-title {
+    display: block; /* Fix error */
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+/* How is works Page Exception */
+.page-id-100 h1.entry-title {
+    display: none;
+}
+
+/* Application Page */
+label {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+/* Apply Complete Page */
+.page-id-89 .container .wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.title-block, .copy-block {
+    color: #000000;
+    font-size: 1.2rem;
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    text-align: center;
+}
+.title-block {
+    margin-bottom: 1.5rem;
+}
+.copy-block{
+    margin-bottom: 2rem;
+}
+.btn-block a {
+    border-radius: 0;
+    padding: .8rem .5rem;
+    color: #fff;
+}
+
+/* Datepicker */
+.datepicker {
+    font-family: 'NotoSans Light', 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', '돋움', dotum, sans-serif;
+    font-size: 0.875rem;
+    border: 2px solid;
+    border-radius: 0 !important;
+}
+
+.dropdown-menu {
+    background-clip: border-box;
+}
+
+.hero-slider-tablet,
+.hero-slider-pc {
+    display: none;
+}
+
+/* Elements */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="url"],
+form input[type="password"],
+form input[type="search"],
+form input[type="number"],
+form input[type="tel"],
+form input[type="range"],
+form input[type="date"],
+form input[type="month"],
+form input[type="week"],
+form input[type="time"],
+form input[type="datetime"],
+form input[type="datetime-local"],
+form input[type="color"],
+form textarea {
+    width: 100%;
+}
+
+/* Header */
+#main-header .container {height: 80px;}
+
+/* Logo Size */
+.site-header #main-header .container .site-branding>a>img {
+    max-width: 180px;
+    max-height: 44px;
+}
+
+.page-id-27 h1 {
+    display: block;
+}
+
+
+@media (min-width: 768px) {
+    .hero-slider-mobile {
+        display: none;
+    }
+
+    .hero-slider-tablet {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero-slider-tablet {
+        display: none;
+    }
+
+    .hero-slider-pc {
+        display: block;
+    }
+
+    /* Logo Size */
+    .site-header #main-header .container .site-branding > a {
+        max-width: 180px;
+    }
+    .site-header #main-header .container .site-branding>a>img {
+        max-width: 180px;
+    }
+    #top-header .container #header-widget-1 {margin-left: 0; font-weight: 900; font-size: 0.6875rem}
+}
